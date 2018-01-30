@@ -1,2 +1,2 @@
-baseurl:/blog
-exclude:['README.md']
+baseurl: /blog
+exclude: ['README.md']
