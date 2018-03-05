@@ -4,6 +4,7 @@ import './App.css';
 import { Navbar, Button, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import Aboutme from './components/aboutme';
 import Portfolios from './components/portfolios';
+import Contact from './components/contact';
 
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <Navbar collapseOnSelect={true}>
+          <Navbar collapseOnSelect={true} fixedTop={true}>
             <Navbar.Header>
               <Navbar.Brand>
                 <a href="#home">HOME</a>
@@ -26,7 +27,7 @@ class App extends Component {
                 <NavItem eventKey={2} href="#portfolios">
                   Portfolios
                 </NavItem>
-                <NavItem eventKey={3} href="#">
+                <NavItem eventKey={3} href="#contactme">
                   Contact Me
                 </NavItem>
                 <NavDropdown eventKey={4} title="Dropdown" id="basic-nav-dropdown">
@@ -40,8 +41,9 @@ class App extends Component {
             </Navbar.Collapse>
           </Navbar>
         </div>
-        <Aboutme id='aboutme'/>
-        <Portfolios id='portfolios'/>
+        <Aboutme />
+        <Portfolios />
+        <Contact />
       </div>
     );
   }
